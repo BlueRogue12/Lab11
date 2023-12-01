@@ -9,12 +9,17 @@
 
 public class Lab11Prob01 {
 
+	// Test recursive abstract method
 	public static void main(String[] args) {
 
 		System.out.println(recursiveAbstract(0));
 		System.out.println(recursiveAbstract(1));
 		System.out.println(recursiveAbstract(2));
+		System.out.println(recursiveAbstract(3));
 		System.out.println(recursiveAbstract(4));
+		System.out.println(recursiveAbstract(5));
+		System.out.println(recursiveAbstract(6));
+
 
 	}// end of main method
 
@@ -27,9 +32,9 @@ public class Lab11Prob01 {
 			return 3;
 		} else if (num == 2) {
 			return 4;
-		// General case
+			// General case
 		} else {
-			return ((recursiveAbstract(num - 3) * recursiveAbstract(num - 2)) - recursiveAbstract(num - 1));
+			return (recursiveAbstract(num - 3) * (recursiveAbstract(num - 2) - recursiveAbstract(num - 1)));
 		}
 	}// end of recursiveAbstract method
 }// end of Lab11
